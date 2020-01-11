@@ -44,12 +44,12 @@ const Subtitle = styled.p`
   color: ${props => props.theme.colors.white.light};
 `;
 
-const Header = ({ children, title, date, cover }) => (
+const Header = ({ children, title, tech, cover }) => (
   <Wrapper>
     <Img fluid={cover || {} || [] || ''} />
     <Text>
       <h1>{title}</h1>
-      <h3>{date}</h3>
+      <h3>{tech}</h3>
 
       {children && <Subtitle>{children}</Subtitle>}
     </Text>

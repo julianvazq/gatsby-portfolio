@@ -29,14 +29,14 @@ const Index = ({ data }) => {
       <PostWrapper>
         {edges.map(({ node }) => {
           const { id, excerpt, frontmatter } = node;
-          const { cover, path, title, date } = frontmatter;
+          const { cover, path, title, tech } = frontmatter;
           return (
             <PostList
               key={id}
               cover={cover.childImageSharp.fluid}
               path={path}
               title={title}
-              date={date}
+              tech={tech}
               excerpt={excerpt}
             />
           );
@@ -73,7 +73,7 @@ export const query = graphql`
   query {
     allMarkdownRemark(
       limit: 6
-      sort: { order: DESC, fields: [frontmatter___date] }
+      sort: { order: ASC, fields: [frontmatter___order] }
     ) {
       edges {
         node {
@@ -81,6 +81,8 @@ export const query = graphql`
           excerpt(pruneLength: 75)
           frontmatter {
             title
+            tech
+
             path
             tags
             date(formatString: "MM.DD.YYYY")

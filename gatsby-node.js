@@ -13,7 +13,7 @@ exports.createPages = ({ graphql, actions }) => {
         `
           query {
             allMarkdownRemark(
-              sort: { order: ASC, fields: [frontmatter___date] }
+              sort: { order: ASC, fields: [frontmatter___order] }
             ) {
               edges {
                 node {
@@ -21,6 +21,7 @@ exports.createPages = ({ graphql, actions }) => {
                     path
                     title
                     tags
+                    tech
                   }
                 }
               }

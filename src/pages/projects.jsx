@@ -9,15 +9,15 @@ const Blog = ({ data }) => {
   const { edges } = data.allMarkdownRemark;
   return (
     <Layout>
-      <Helmet title={'Blog Page'} />
-      <Header title="Blog Page">Gatsby Tutorial Starter</Header>
+      <Helmet title={'Projects Page'} />
+      <Header title="Projects Page">Gatsby Tutorial Starter</Header>
       {edges.map(({ node }) => (
         <BlogList
           key={node.id}
           cover={node.frontmatter.cover.childImageSharp.fluid}
           path={node.frontmatter.path}
           title={node.frontmatter.title}
-          date={node.frontmatter.date}
+          tech={node.frontmatter.tech}
           tags={node.frontmatter.tags}
           excerpt={node.excerpt}
         />
@@ -51,7 +51,7 @@ Blog.propTypes = {
 
 export const query = graphql`
   query {
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+    allMarkdownRemark(sort: { order: ASC, fields: [frontmatter___order] }) {
       edges {
         node {
           id
@@ -60,6 +60,7 @@ export const query = graphql`
             title
             path
             tags
+            tech
             date(formatString: "MM.DD.YYYY")
             cover {
               childImageSharp {
