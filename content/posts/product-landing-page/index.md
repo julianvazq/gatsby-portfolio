@@ -1,6 +1,6 @@
 ---
 path: '/product-landing-page'
-cover: '../2018-10-17/finance.jpg'
+cover: './exercise-site.png'
 date: '2018-10-18'
 title: 'Product Landing Page'
 tech: 'HTML | CSS'

@@ -27,6 +27,11 @@ const Nav = styled.nav`
   }
 `;
 
+const Span = styled.span`
+  color: white;
+  padding-left: 2rem;
+`;
+
 const NavBar = () => (
   <Headroom calcHeightOnResize disableInlineStyles>
     <StyledLink to="/">
@@ -36,6 +41,10 @@ const NavBar = () => (
       <Link to="/">Home</Link>
       <Link to="/projects">Projects</Link>
       <Link to="/about">About</Link>
+      <Span>|</Span>
+      <a href="https://github.com/julianvazq" target="_blank">
+        GitHub
+      </a>
     </Nav>
   </Headroom>
 );

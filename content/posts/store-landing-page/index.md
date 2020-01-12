@@ -1,6 +1,6 @@
 ---
 path: '/store-landing-page'
-cover: './speed.jpg'
+cover: './exotic-pet-store.png'
 date: '2018-10-16'
 title: 'Store Landing Page'
 published: true

@@ -1,6 +1,6 @@
 ---
 path: '/js-typing-test'
-cover: './finance.jpg'
+cover: './js-typing-test.png'
 date: '2018-10-17'
 title: 'JS Typing Test'
 tags: ['HTML', 'CSS', 'JavaScript']
